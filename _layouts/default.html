@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/site.css" />
+
+    <title>OSS Perks</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="logo" style="float:left">OSS Perks</h1>
+
+            <div style="float:right">
+                <ul class="nav">
+                    <li><a href="https://twitter.com/ossperks" class="icon twitter">Follow</a></li>
+                    <li><a href="https://github.com/nikmd23/ossperks/" class="icon github">Fork</a></li>
+                    <li><a href="http://xavierdecoster.github.io/mvpperks/" class="icon mvpperks">MVP Perks</a></li>
+                </ul>
+            </div>
+
+	    <blockquote class="tagline">
+		A listing of tools and services that are made freely available to open source projects.
+            </blockquote>
+        </div>
+    </header>
+    <div class="body">
+        <div class="body-inner">
+{{ content }}
+        </div>
+    </div>
+    <footer>
+        <span>&copy; 2013 <a href="https://twitter.com/nikmd23">Nik Molnar</a> & <a href="https://twitter.com/anthony_vdh">Anthony van der Hoorn</a></span>
+    </footer> 
+    <!-- 
+    <script src="./javascript/main.js"></script>
+      -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.filters .tag').click(function() {
+                var item = $(this).toggleClass('deactive').hasClass('deactive');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");
+        document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker=_gat._getTracker("UA-41588146-1");
+            pageTracker._trackPageview();
+        } catch(err) { }
+    </script>
+
+</body>
+</html>
