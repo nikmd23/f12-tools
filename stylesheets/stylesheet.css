@@ -480,6 +480,14 @@ footer a:hover {
   margin-bottom: 3em;
 }
 
+.posts > li:after {
+    visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
 .title {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: 22px;
