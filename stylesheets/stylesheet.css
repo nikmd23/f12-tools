@@ -11,12 +11,10 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-# Hi
-This is a test post
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video  {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -476,6 +474,10 @@ footer a:hover {
 
 .posts {
     list-style: none;
+}
+
+.posts > li {
+  margin-bottom: 3em;
 }
 
 .title {
