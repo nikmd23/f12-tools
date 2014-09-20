@@ -15,7 +15,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video  {
-	margin: 0;
+    margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -91,7 +91,7 @@ header h2 {
 
 .inner {
   position: relative;
-  width: 940px;
+  /*width: 940px;*/
   margin: 0 auto;
 }
 
@@ -101,7 +101,7 @@ header h2 {
 }
 
 #main-content {
-  width: 690px;
+  width: 75%;
   float: left;
 }
 
@@ -110,7 +110,7 @@ header h2 {
 }
 
 aside#sidebar {
-  width: 200px;
+  width: 20%;
   padding-left: 20px;
   min-height: 504px;
   float: right;
@@ -372,14 +372,11 @@ footer a:hover {
 /* #Media Queries
 ================================================== */
 
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {}
-
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-  .inner {
+@media only screen and (min-width: 768px) {
+  /*.inner {
     width: 740px;
-  }
+  }*/
   header h1, header h2 {
     width: 340px;
   }
@@ -388,9 +385,6 @@ footer a:hover {
   }
   header h2 {
     font-size: 30px;
-  }
-  #main-content {
-    width: 490px;
   }
   #main-content h1:before,
   #main-content h2:before,
@@ -402,13 +396,78 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
+    
+  .post-date {
+    border: thin solid #3378D3;
+    border-radius: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,serif;
+    font-variant: small-caps;
+    font-size: 1.5em;
+    overflow: hidden;
+    background: url('../images/header-bg.jpg') repeat-x scroll 0px 0px #2E7BCF;
+    float: left;
+  }
+  .post-date:before {
+    background-color: #FFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.5em;
+    height: 2.5em;
+    display:block;
+    content:"";
+  }
+    
+  .posts .title {
+    margin-left: 3.5em;
+    display: block;
+  }
+    
+  .posts article {
+    margin-left:5em;
+    maring-top: -0.5em;
+    max-width: 45em;
+  }
+
+  .post-date > span {
+    font-size: 1.5em;
+    line-height: 0.5;
+  }
+
+  .post-date[data-browser='aurora']:before {
+    background-image: url('../images/aurora48.png');
+  }
+
+  .post-date[data-browser='firefox']:before {
+    background-image: url('../images/firefox48.png');
+  }
+
+  .post-date[data-browser='canary']:before {
+    background-image: url('../images/canary48.png');
+  }
+
+  .post-date[data-browser='chrome']:before {
+    background-image: url('../images/chrome48.png');
+  }
+
+  .post-date[data-browser='ie']:before {
+    background-image: url('../images/ie48.png');
+  }
+
+  .post-date[data-browser='dev-channel']:before {
+    background-image: url('../images/dev-channel48.png');
+  }
 }
 
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
   .inner {
     width: 93%;
   }
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
   header {
     padding: 20px 0;
   }
@@ -470,10 +529,30 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
   }
+    
+  .post-date {
+    border: thin solid #3378D3;
+    border-radius: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,serif;
+    font-variant: small-caps;
+    overflow: hidden;
+    background: url('../images/header-bg.jpg') repeat-x scroll 0px 0px #2E7BCF;
+    float: right;
+      padding: 0.5em;
+      margin: 0 0 0.5em 0.5em
+} 
+    .posts .title {
+    margin:0;
+    }
 }
 
 .posts {
     list-style: none;
+    max-width: 50em;
+    margin: auto;
 }
 
 .posts > li {
@@ -501,72 +580,3 @@ footer a:hover {
   color: #9ddcff;
   padding-right: 0.3em;
 }
-
-.posts .title {
-    margin-left: 3.5em;
-    display: block;
-}
-
-.posts article {
-    margin-left:5em;
-    maring-top: -0.5em;
-}
-
-.post-date {
-    border: thin solid #3378D3;
-    border-radius: 0.5em;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFF;
-    font-family: "Architects Daughter","Helvetica Neue",Helvetica,Arial,serif;
-    font-variant: small-caps;
-    font-size: 1.5em;
-    overflow: hidden;
-    background: url('../images/header-bg.jpg') repeat-x scroll 0px 0px #2E7BCF;
-    float: left;
-}
-
-.post-date:before {
-    background-color: #FFF;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 2.5em;
-    height: 2.5em;
-    display:block;
-    content:"";
-}
-
-.post-date > span {
-    font-size: 1.5em;
-    line-height: 0.5;
-}
-
-.post-date[data-browser='aurora']:before {
-    background-image: url('../images/aurora48.png');
-}
-
-.post-date[data-browser='firefox']:before {
-    background-image: url('../images/firefox48.png');
-}
-
-.post-date[data-browser='canary']:before {
-    background-image: url('../images/canary48.png');
-}
-
-.post-date[data-browser='chrome']:before {
-    background-image: url('../images/chrome48.png');
-}
-
-.post-date[data-browser='ie']:before {
-    background-image: url('../images/ie48.png');
-}
-
-.post-date[data-browser='dev-channel']:before {
-    background-image: url('../images/dev-channel48.png');
-}
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}

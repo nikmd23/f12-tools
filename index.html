@@ -6,7 +6,7 @@ title: F12 Tools
 <ul class="posts">
     {% for post in site.posts %}
     <li>
-        <time datetime="{{ post.date }}" class="post-date" data-browser="{{ post.browser }}">{{ post.date | date: "%b <br><span> %d</span>" }}</time>
+        <time datetime="{{ post.date }}" class="post-date" data-browser="{{ post.browser }}">{{ post.date | date: "%b<br><span> %d</span>" }}</time>
         <a href="{{ post.url }}" class="title">{{ post.title }}</a>
         <article>{{ post.excerpt }}</article>
     </li>
