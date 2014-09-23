@@ -65,10 +65,10 @@ a:hover {
 
 header {
   padding-top: 1em;
-  padding-bottom: 1e;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
+  height: 8em;
 }
 
 header h1 {
@@ -469,7 +469,7 @@ nav a {
     padding: 5px 10px;
     position: relative;
     text-align: center;
-    font-size: 13px;
+    font-size: 1em;
     line-height: 1;
     background-color: #9ddcff;
     color: #2879d0;
