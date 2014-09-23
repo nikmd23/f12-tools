@@ -64,8 +64,8 @@ a:hover {
 }
 
 header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 1em;
+  padding-bottom: 1e;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
@@ -97,7 +97,7 @@ header h2 {
 
 #content-wrapper {
   border-top: solid 1px #fff;
-  padding-top: 30px;
+  padding-top: 2em;
 }
 
 #main-content {
@@ -377,14 +377,9 @@ footer a:hover {
   /*.inner {
     width: 740px;
   }*/
-  header h1, header h2 {
-    width: 340px;
-  }
   header h1 {
     font-size: 60px;
-  }
-  header h2 {
-    font-size: 30px;
+    width: 340px;
   }
   #main-content h1:before,
   #main-content h2:before,
@@ -465,25 +460,7 @@ footer a:hover {
     width: 93%;
   }
 
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
-
-  header {
-    padding: 20px 0;
-  }
-  header .inner {
-    position: relative;
-  }
-  header h1, header h2 {
-    width: 100%;
-  }
-  header h1 {
-    font-size: 48px;
-  }
-  header h2 {
-    font-size: 24px;
-  }
-  header a.button {
+nav a {
     background-image: none;
     width: auto;
     height: auto;
@@ -500,9 +477,23 @@ footer a:hover {
     -webkit-border-radius: 5px;                     
     border-radius: 5px;    
   }
-  header a.button small {
-    font-size: 13px;
-    display: inline;
+
+nav li {
+ display: inline;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+  header {
+    padding: 20px 0;
+  }
+  header .inner {
+    position: relative;
+  }
+  header h1 {
+    width: 100%;
+    font-size: 48px;
   }
   #main-content,
   aside#sidebar {
