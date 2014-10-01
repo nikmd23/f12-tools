@@ -1,3 +1,6 @@
+---
+---
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -388,20 +391,23 @@ nav li {
 .yes, .no, .unknown {
   border: 10px solid #FFF;
 }
+$dark-green: #006100;
 .yes {
   background-color: #C6EFCE;
-  box-shadow: 0 0 0 1px #006100 inset;
-  color: #006100;
+  box-shadow: 0 0 0 1px $dark-green inset;
+  color: $dark-green;
 }
+$dark-red: #9C0006;
 .no {
   background-color: #FFC7CE;
-  box-shadow: 0 0 0 1px #9C0006 inset;
-  color: #9C0006;
+  box-shadow: 0 0 0 1px $dark-red inset;
+  color: $dark-red;
 }
+$dark-gray: gray;
 .unknown {
   background-color: #DEDEDE;
-  box-shadow: 0 0 0 1px grey inset;
-  color: grey;
+  box-shadow: 0 0 0 1px $dark-gray inset;
+  color: $dark-gray;
 }
 
 /* MISC */
