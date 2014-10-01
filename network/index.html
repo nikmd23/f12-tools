@@ -1,29 +1,53 @@
 ---
 layout: default
-title: F12 Tools
+title: Network
 ---
 
-This is the network page
+<h2>Network</h2>
+<p>Brief description of network tools. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare velit non lorem commodo, ut pharetra eros pretium. Nam sagittis cursus enim. Aenean felis ligula, imperdiet eget justo ac, posuere tempor mi. Sed eu venenatis odio. Proin tempus dictum massa. Fusce diam ipsum, placerat nec ante eu, imperdiet tempus justo. Nam ut ante ullamcorper, consequat felis ac, molestie dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, nulla sed aliquet scelerisque, felis erat porta magna, et viverra velit mi sed nibh. Donec bibendum placerat arcu eget vulputate. Nunc tempor tortor ut erat consectetur porta.</p>
 
-<table>
+<table class="comparison">
     <thead>
-        <th>Feature</th>
-        <th>Chrome</th>
-        <th>FireFox</th>
-        <th>Internet Explorer</th>
-        <th>Safari</th>
+        <th></th>
+        <th class="chrome"><small>Google</small> Chrome</th>
+        <th class="firefox"><small>Mozilla</small> FireFox</th>
+        <th class="ie"><small>Microsoft</small> Internet Explorer</th>
+        <th class="safari"><small>Apple</small> Safari</th>
     </thead>
     <tbody>
         <tr>
-            <td>Persist Log</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th>Columns <br/><small>What columns of data are available.</small></th>
+            <td class="yes">
+                <ul>
+                    <li>Boo</li>
+                    <li>Foo</li>
+                    <li>Longer</li>
+                    <li>Much Longer</li>
+                    <li>Okay</li>
+                </ul>
+            </td>
+            <td class="no"></td>
+            <td class="yes"></td>
+            <td class="unknown"></td>
         </tr>
+        <tr>
+            <th>Persist Log<br/><small>Persist the log across page browses.</small></th>
+            <td class="yes"></td>
+            <td class="no"></td>
+            <td class="yes"></td>
+            <td class="unknown"></td>
+        </tr>
+        <!--<tr>
+            <th>Export Requests<br/><small>Export the data to a flat file.</small></th>
+            <td class="yes">HAR</td>
+            <td class="no"></td>
+            <td class="yes">XML, CSV</td>
+            <td class="unknown"></td>
+        </tr>-->
     </tbody>
 </table>
 
+<!--
 
 - Persist Log
 - Columns
@@ -64,3 +88,4 @@ IE - http://msdn.microsoft.com/en-us/library/ie/dn255004(v=vs.85).aspx
 - Export via XML or CSV
 - DOMContentLoaded and LoadEvent lines
 - Initiator details page
+-->
