@@ -18,54 +18,129 @@ title: Network
         <tr>
             <th>Columns <br/><small>What columns of data are available.</small></th>
             <td class="yes">
+                <ol>
+                    <li>File Name & Path</li>
+                    <li>HTTP Method</li>
+                    <li>HTTP Status Code & Description</li>
+                    <li>Content Type</li>
+                    <li>Initiator</li>
+                    <li>File Size & Bytes Transfered</li>
+                    <li>Download Duration & Latency</li>
+                    <li>Waterfall Chart</li>
+                    <li><em>Many optional columns</em></li>
+                </ol>
+            </td>
+            <td class="yes">
+                <ol>
+                    <li>HTTP Status Code</li>
+                    <li>File Name</li>
+                    <li>Domain</li>
+                    <li>Content Type</li>
+                    <li>File Size</li>
+                    <li>Waterfall Chart</li>
+                </ol>
+            </td>
+            <td class="yes">
+                <ol>
+                    <li>Url</li>
+                    <li>Protocol</li>
+                    <li>HTTP Method</li>
+                    <li>HTTP Status Code</li>
+                    <li>Content Type</li>
+                    <li>File Size</li>
+                    <li>Download Time</li>
+                    <li>Initiator</li>
+                    <li>Waterfall Chart</li>
+                </ol>
+            </td>
+            <td class="yes">
+                <ol>
+                    <li>File Name</li>
+                    <li>Domain</li>
+                    <li>Content Type</li>
+                    <li>HTTP Status Code</li>
+                    <li>Cached</li>
+                    <li>File Size</li>
+                    <li>Bytes Transfered</li>
+                    <li>Latency</li>
+                    <li>Download Duration</li>
+                    <li>Waterfall Chart</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <th>Persist Log<br/><small>Persist the log across page loads.</small></th>
+            <td class="yes">Yes, via "Preserve Log" checkbox</td>
+            <td class="yes">Yes, via "Enable persistent log" checkbox in Settings</td>
+            <td class="yes">Yes, via "Clear entries on navigate" button</td>
+            <td class="no"></td>
+        </tr>
+        <tr>
+            <th>Export Requests<br/><small>Export the data to a flat file.</small></th>
+            <td class="yes">
                 <ul>
-                    <li>Boo</li>
-                    <li>Foo</li>
-                    <li>Longer</li>
-                    <li>Much Longer</li>
-                    <li>Okay</li>
+                    <li><a href="http://en.wikipedia.org/wiki/.har">Http Archive (.har)</a></li>
+                    <li><a href="http://curl.haxx.se/">cURL</a> Command</li>
+                </ul>
+            </td>
+            <td class="yes">
+                <ul>
+                    <li><a href="http://curl.haxx.se/">cURL</a> Command</li>
+                    <li><a href="http://en.wikipedia.org/wiki/Data_URI_scheme">Data Uri</a> <small>(Images Only)</small></li>
+                </ol>
+            </td>
+            <td class="yes">
+                <ul>
+                    <li>XML</li>
+                    <li>CSV</li>
                 </ul>
             </td>
             <td class="no"></td>
-            <td class="yes"></td>
+        </tr>
+        <tr>
+            <th>Waterfall Chart<br/><small>What does the waterfall chart support. onLoad, DOMContentLoaded, sections of time.</small></th>
+            <td class="unknown"></td>
+            <td class="unknown">DNS Resolution:Pink, Connecting:Orange, Sending:Blue, Waiting:Blue,Reieving:Green</td>
+            <td class="unknown"></td>
             <td class="unknown"></td>
         </tr>
         <tr>
-            <th>Persist Log<br/><small>Persist the log across page browses.</small></th>
-            <td class="yes"></td>
-            <td class="no"></td>
-            <td class="yes"></td>
+            <th>Replay Request<br/><small>Reissue a request directly from the dev tools.</small></th>
+            <td class="unknown"></td>
+            <td class="unknown">Edit and resend</td>
+            <td class="unknown"></td>
             <td class="unknown"></td>
         </tr>
-        <!--<tr>
-            <th>Export Requests<br/><small>Export the data to a flat file.</small></th>
-            <td class="yes">HAR</td>
-            <td class="no"></td>
-            <td class="yes">XML, CSV</td>
+        <tr>
+            <th>Request Details<br/><small>What details are available for a request: headers, query string, etc.</small></th>
+            <td class="unknown">Syntax highlighing in response previews
+            - WEIRD: QueryString listed in Header. Encode or Decode URL
+            </td>
+            <td class="unknown">Thumbnails of images
+            Syntax highlighting in text responses</td>
+            <td class="unknown">DOMContentLoaded and LoadEvent lines</td>
             <td class="unknown"></td>
-        </tr>-->
+        </tr>
     </tbody>
 </table>
 
+<h3>Special Features</h3>
+
+<h4>Google Chrome</h4>
+<ol>
+    <li></li>
+</ol>
 <!--
 
-- Persist Log
-- Columns
-    - FF: Status Code, Method, File, Domain, Content-Type, Size, Gantt Chart, Sortable
+- Sortable
 - Filter
 - Clear
-- Aggregate Data
-- Ghantt Chart
+- Aggregate Data / Totals
+- Ghantt Chart: content loaded lines
 
 
 FF - https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor
-- Shows thumbnail of images hover over
-- Copy as cURL (v31)
-- Copy as DataU
-- Edit and Resend
 - Perf Analysis Like Audits?
-- Syntax highlighting in text responses
-- DNS Resolution:Pink, Connecting:Orange, Sending:Blue, Waiting:Blue,Reieving:Green
 - Aggregates shown as pie charts which lead back to filtered results
 - MISSING: OnLoad/DOMContent loaded lines
 - MISSING: Initiator
@@ -73,19 +148,10 @@ FF - https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor
 - MISSING: WebSockets Support
 
 Chrome - https://developer.chrome.com/devtools/docs/network#network-panel-overview
-- OnLoad/DOMContent loaded lines
-- Large and Small rows
-- Columns, lots show/hide - details when large
+- Large and Small rows, lots show/hide - details when large
 - Sort by Start Time, Response Time, End Time, Duration & Latency
-- Copy as cURL
-- Copy as HAR AND Save as HAR
-- Replay, no edit, only XHR
-- WEIRD: QueryString listed in Header. Encode or Decode URL
 - WebSockets Frames
-- Syntax highlighting in text responses
 
 IE - http://msdn.microsoft.com/en-us/library/ie/dn255004(v=vs.85).aspx
-- Export via XML or CSV
-- DOMContentLoaded and LoadEvent lines
 - Initiator details page
 -->
