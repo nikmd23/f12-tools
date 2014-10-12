@@ -457,10 +457,11 @@ $dark-gray: gray;
   }
   header .inner {
     position: relative;
+    text-align: center;
   }
   header h1 {
     width: 100%;
-    font-size: 48px;
+    font-size: 3em;
   }
   #main-content,
   aside#sidebar {
