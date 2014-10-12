@@ -275,6 +275,13 @@ nav a {
 nav li {
   display: inline;
 }
+.spacer {
+  color: white;
+  vertical-align: middle;
+}
+.twitter-widget iframe {
+  width: 100% !important;
+}
 .posts {
   list-style: none;
   max-width: 50em;
