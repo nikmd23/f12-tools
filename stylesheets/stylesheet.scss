@@ -28,10 +28,10 @@ header {
 }
 header h1 {
   letter-spacing: -1px;
-  font-size: 72px;
+  font-size: 4em;
   color: #fff;
   line-height: 1;
-  margin-bottom: 0.2em;
+  margin: 0;
   width: 540px;
 }
 header h2 {
@@ -382,10 +382,6 @@ $dark-gray: gray;
 
 /* LARGE */
 @media only screen and (min-width: 768px) {
-  header h1 {
-    font-size: 60px;
-    width: 340px;
-  }
   #main-content h1:before,
   #main-content h2:before,
   #main-content h3:before,
