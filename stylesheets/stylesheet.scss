@@ -212,9 +212,6 @@ h6:before {
   padding-right: 0.3em;
   margin-left: -3.7em;
 }
-p {
-  margin-bottom: 20px;
-}
 a {
   text-decoration: none;
 }
@@ -240,18 +237,22 @@ dl dd {
   font-weight: 100;
 }
 footer {
-  background: transparent url('../images/hr.png') 0 0 no-repeat;
-  margin-top: 40px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  background: url('../images/header-bg.jpg') repeat-x scroll 0px 0px #2E7BCF;
+  margin-top: 1em;
   font-size: 13px;
-  color: #aaa;
+  color: #FFF;
+  border-top: 1px solid #275DA1;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 footer a {
-  color: #666;
+  font-weight: bold;
+  color: #FFF;
 }
 footer a:hover {
-  color: #444;
+  color: #FFF;
+  text-decoration: underline;
 }
 
 /* MY STYLES */
