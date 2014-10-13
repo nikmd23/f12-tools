@@ -364,6 +364,11 @@ $dark-gray: gray;
   box-shadow: 0 0 0 1px $dark-gray inset;
   color: $dark-gray;
 }
+main > :not(.comparison) {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
 
 /* MISC */
 .clearfix:after {
