@@ -442,9 +442,10 @@ main > :not(.comparison) {
     width: 100%;
     font-size: 3em;
   }
+  main,
   aside#sidebar {
     float: none;
-    width: 100% ! important;
+    width: 90% ! important;
   }
   aside#sidebar {
     background-image: none;
