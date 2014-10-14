@@ -20,7 +20,7 @@ a:hover {
   color: #2268b2;
 }
 header {
-  padding-top: 1em;
+  padding: 1em 0 0 1em;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
@@ -211,18 +211,6 @@ blockquote {
   margin-bottom: 20px;
   padding: 0 0 0 30px;
 }
-ul {
-  list-style: disc inside;
-  padding-left: 20px;
-}
-ol {
-  list-style: decimal inside;
-  padding-left: 3px;
-}
-dl dd {
-  font-style: italic;
-  font-weight: 100;
-}
 footer {
   background: url('../images/header-bg.jpg') repeat-x scroll 0px 0px #2E7BCF;
   margin-top: 1em;
@@ -259,6 +247,9 @@ nav a {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;                     
   border-radius: 5px;    
+}
+nav ul {
+  padding: 0;
 }
 nav li {
   display: inline;
