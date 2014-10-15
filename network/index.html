@@ -3,12 +3,64 @@ layout: default
 title: Network
 ---
 
+<script>
+    window.onload = function() {
+        var count = 1;
+        [].forEach.call(document.querySelectorAll('.comparison input[type=checkbox]'), function(e){
+            e.onchange = function(i){
+                var target = i.target,
+                    colId = target.id.replace('checkbox', 'col');
+                    column = document.querySelector('#' + colId);
+                
+                column.classList.toggle('hidden-col');
+                
+                var otherColumns = document.querySelectorAll('.comparison col:not(.hidden-col)'),
+                    width = 100/otherColumns.length;
+
+                console.log(otherColumns);
+                console.log(width);
+                
+                [].forEach.call(otherColumns, function(col){ 
+                    col.style.width = width + "%"; 
+                });
+            };
+        });
+    };
+</script>
+
+<style>
+    .hidden-col {
+        visibility: collapse;
+        width: 0 !important;
+    }
+    
+    .comparison col {
+        width: 20%;
+    }
+    
+    .comparison input[type=checkbox] {
+        display: none;
+    }
+</style>
+
 <h2>Network</h2>
 <p>Brief description of network tools. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare velit non lorem commodo, ut pharetra eros pretium. Nam sagittis cursus enim. Aenean felis ligula, imperdiet eget justo ac, posuere tempor mi. Sed eu venenatis odio. Proin tempus dictum massa. Fusce diam ipsum, placerat nec ante eu, imperdiet tempus justo. Nam ut ante ullamcorper, consequat felis ac, molestie dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra, nulla sed aliquet scelerisque, felis erat porta magna, et viverra velit mi sed nibh. Donec bibendum placerat arcu eget vulputate. Nunc tempor tortor ut erat consectetur porta.</p>
 
 <table class="comparison">
+    <colgroup>
+        <col id="feature-col" />
+        <col id="chrome-col" />
+        <col id="firefox-col" />
+        <col id="ie-col" />
+        <col id="safari-col" />
+    </colgroup>
     <thead>
-        <th></th>
+        <th>
+            <label for="chrome-checkbox"><img src="/images/chrome24.png"/></label><input id="chrome-checkbox" type="checkbox" checked/>
+            <label for="firefox-checkbox"><img src="/images/firefox24.png"/></label><input id="firefox-checkbox" type="checkbox" checked/>
+            <label for="ie-checkbox"><img src="/images/ie24.png"/></label><input id="ie-checkbox" type="checkbox" checked/>
+            <label for="safari-checkbox"><img src="/images/safari24.png"/></label><input id="safari-checkbox" type="checkbox" checked/>
+        </th>
         <th class="chrome"><small>Google</small> Chrome</th>
         <th class="firefox"><small>Mozilla</small> FireFox</th>
         <th class="ie"><small>Microsoft</small> Internet Explorer</th>
