@@ -11,15 +11,11 @@ title: Network
                 var target = i.target,
                     img = document.querySelector('label[for='+ target.id +'] img');
                 
-                
-                console.log('selector ', target.dataset.columnSelector);
-                console.log('change these ', document.querySelectorAll(target.dataset.columnSelector));
                 if (target.checked){
                     target.dataset.priority = ++counter;
                     
                     img.src = img.src.replace('disabled-','');
                     [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
-                        console.log('show column');
                         e.classList.remove('hidden-col');
                     });
                     
@@ -28,7 +24,6 @@ title: Network
                 else {
                     img.src = img.src.replace('/images/','/images/disabled-');
                     [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
-                        console.log('hide column');
                         e.classList.add('hidden-col');
                     });
                 }
@@ -61,6 +56,8 @@ title: Network
                 switcher.classList.add('hide-browser-switcher');
             else
                 switcher.classList.remove('hide-browser-switcher');
+            
+            console.log(columnCount);
             
             if (!skipEnforceColumns)
                 enforceColumns();
@@ -240,7 +237,7 @@ title: Network
         <tr>
             <th>Waterfall Chart<br/><small>What does the waterfall chart support. onLoad, DOMContentLoaded, sections of time.</small></th>
             <td class="unknown"></td>
-            <td class="unknown">DNS Resolution:Pink, Connecting:Orange, Sending:Blue, Waiting:Blue,Reieving:Green</td>
+            <td class="unknown">DNS Resolution:Pink, Connecting:Orange, Sending:Blue, Waiting:Blue, Reieving:Green</td>
             <td class="unknown"></td>
             <td class="unknown"></td>
         </tr>
