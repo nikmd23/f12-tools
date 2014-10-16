@@ -4,42 +4,124 @@ title: Network
 ---
 
 <script>
-    window.onload = function() {
-        var count = 1;
+    window.onload = function(mql) {
+        // wire up click handlers
         [].forEach.call(document.querySelectorAll('.comparison input[type=checkbox]'), function(e){
             e.onchange = function(i){
                 var target = i.target,
-                    colId = target.id.replace('checkbox', 'col');
-                    column = document.querySelector('#' + colId);
+                    img = document.querySelector('label[for='+ target.id +'] img');
                 
-                column.classList.toggle('hidden-col');
-                
-                var otherColumns = document.querySelectorAll('.comparison col:not(.hidden-col)'),
-                    width = 100/otherColumns.length;
-
-                console.log(otherColumns);
-                console.log(width);
-                
-                [].forEach.call(otherColumns, function(col){ 
-                    col.style.width = width + "%"; 
-                });
+                if (target.checked){
+                    target.dataset.priority = ++counter;
+                    
+                    img.src = img.src.replace('disabled-','');
+                    [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
+                        e.classList.remove('hidden-col');
+                    });
+                    
+                    enforceColumns();
+                }
+                else {
+                    img.src = img.src.replace('/images/','/images/disabled-');
+                    [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
+                        e.classList.add('hidden-col');
+                    });
+                }
             };
         });
+        
+        var columnCount = 4,
+            large = window.matchMedia("(max-width: 63em)"),
+            medium = window.matchMedia("(max-width: 50em)"),
+            small = window.matchMedia("(max-width: 33em)"),
+            counter = columnCount, // is this the right logic?
+            switcher = document.querySelector('.comparison thead th:first-of-type');
+        
+        large.addListener(updateColumnCount);
+        updateColumnCount(large, true);
+        
+        medium.addListener(updateColumnCount);
+        updateColumnCount(medium, true);
+        
+        small.addListener(updateColumnCount);
+        updateColumnCount(small);
+        
+        function updateColumnCount(mql, skipEnforceColumns) {
+            if (mql.matches)
+                columnCount = Math.max(columnCount-1, 1);
+            else
+                columnCount = Math.min(columnCount+1, 4);
+            
+            if (columnCount === 4)
+                switcher.classList.add('hide-browser-switcher');
+            else
+                switcher.classList.remove('hide-browser-switcher');
+            
+            if (!skipEnforceColumns)
+                enforceColumns();
+        }
+        
+        function enforceColumns(){
+            var checked = document.querySelectorAll('.comparison input:checked'),
+                overage = checked.length - columnCount,
+                evt = document.createEvent('HTMLEvents');
+            
+            if (overage === 0) return; 
+            
+            evt.initEvent('change', true, true);
+            if (overage > 0){
+                // turn off "over" columns
+                [].slice.call(checked,0)
+                .sort(function (a, b) {
+                    return a.dataset.priority - b.dataset.priority;
+                })
+                .some(function (e, i) {
+                    if (i >= overage) return false;
+
+                    e.checked = false;
+                    e.dispatchEvent(evt);
+                });
+            } else {
+                // turn on "under" columns
+                [].slice.call(document.querySelectorAll('.comparison input:not(:checked)'),0)
+                .sort(function (a, b) {
+                    return b.dataset.priority - a.dataset.priority;
+                })
+                .some(function (e, i) {
+                    if (i >= Math.abs(overage)) return false;
+
+                    e.checked = true;
+                    e.dispatchEvent(evt);
+                });
+            }
+        }
     };
 </script>
 
 <style>
-    .hidden-col {
-        visibility: collapse;
-        width: 0 !important;
-    }
-    
     .comparison col {
+        min-width: 12.5em;
         width: 20%;
     }
     
+    .comparison col:first-of-type {
+        min-width: 4em;
+    }
+        
     .comparison input[type=checkbox] {
         display: none;
+    }
+    
+    .comparison .hidden-col {
+        visibility: collapse;
+    }
+    
+    .comparison thead th:first-of-type * {
+        transition: opacity 0.5s ease;
+    }
+    
+    .comparison .hide-browser-switcher * {
+        opacity: 0;
     }
 </style>
 
@@ -48,18 +130,22 @@ title: Network
 
 <table class="comparison">
     <colgroup>
-        <col id="feature-col" />
-        <col id="chrome-col" />
+        <col id="feature-col"/>
+        <col id="chrome-col"/>
         <col id="firefox-col" />
-        <col id="ie-col" />
-        <col id="safari-col" />
+        <col id="ie-col"/>
+        <col id="safari-col"/>
     </colgroup>
     <thead>
         <th>
-            <label for="chrome-checkbox"><img src="/images/chrome24.png"/></label><input id="chrome-checkbox" type="checkbox" checked/>
-            <label for="firefox-checkbox"><img src="/images/firefox24.png"/></label><input id="firefox-checkbox" type="checkbox" checked/>
-            <label for="ie-checkbox"><img src="/images/ie24.png"/></label><input id="ie-checkbox" type="checkbox" checked/>
-            <label for="safari-checkbox"><img src="/images/safari24.png"/></label><input id="safari-checkbox" type="checkbox" checked/>
+            <span style="white-space:nowrap;">
+                <input id="chrome-checkbox" type="checkbox" data-priority="4" data-column-selector="#chrome-col" checked/><label for="chrome-checkbox"><img src="/images/chrome24.png"/></label>
+                <label for="firefox-checkbox"><img src="/images/firefox24.png"/></label><input id="firefox-checkbox" type="checkbox" data-priority="3" data-column-selector="#firefox-col" checked/>
+            </span>
+            <span style="white-space:nowrap;">
+                <label for="ie-checkbox"><img src="/images/ie24.png"/></label><input id="ie-checkbox" type="checkbox" data-priority="2" data-column-selector="#ie-col" checked/>
+                <label for="safari-checkbox"><img src="/images/safari24.png"/></label><input id="safari-checkbox" type="checkbox" data-priority="1" data-column-selector="#safari-col" checked/>
+            </span>
         </th>
         <th class="chrome"><small>Google</small> Chrome</th>
         <th class="firefox"><small>Mozilla</small> FireFox</th>
@@ -182,6 +268,10 @@ title: Network
 <ol>
     <li></li>
 </ol>
+
+What the different size's mean: https://github.com/w3c/navigation-timing/issues/3#issue-45803731
+Dev tools tips: http://devtoolstips.com/
+
 <!--
 
 - Sortable

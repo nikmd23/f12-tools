@@ -4,6 +4,10 @@
 
 @import 'normalize';
 
+* {
+  box-sizing: border-box;
+}
+
 /* LAYOUT STYLES */
 body {
   font-size: 15px;
@@ -46,12 +50,13 @@ header h2 {
   padding-top: 2em;
 }
 main {
-  width: 75%;
+  width: 90%;
   float: left;
-  padding-left: 1em;
+  padding: 0 0.5em;
+  overflow: hidden;
 }
 aside#sidebar {
-  width: 20%;
+  width: 10%;
   padding-left: 20px;
   min-height: 504px;
   float: right;
@@ -289,7 +294,7 @@ nav li {
   padding-right: 0.3em;
 }
 .comparison {
-  width: 100%;
+  margin: 0 auto;
   border-collapse: separate;
 }
 .comparison > thead th {
@@ -319,6 +324,11 @@ nav li {
 .comparison td, .comparison th {
   padding: 0.5em;
   margin: 0.5em;
+  vertical-align: top;
+}
+.comparison ul, .comparison ol {
+    padding-left: 1.5em;
+    margin: 0.25em 0;
 }
 .yes, .no, .unknown {
   border: 10px solid #FFF;
@@ -435,7 +445,7 @@ main > :not(.comparison) {
   main,
   aside#sidebar {
     float: none;
-    width: 90% ! important;
+    width: 100% ! important;
   }
   aside#sidebar {
     background-image: none;
