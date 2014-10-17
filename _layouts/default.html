@@ -10,17 +10,12 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <title><F12 Tools = "{{ page.title }}" /></title>
   </head>
 
   <body>
     <header>
-        <h1><span style="color:#444">&lt;</span>F12<span style="color:#444">/&gt;</span> Tools</h1>
+        <h1 class="logo"><span>&lt;</span>F12<span>/&gt;</span> Tools</h1>
         <nav>
           <ul>
             <li><a href="/" title="News"><i class="fa fa-newspaper-o"></i></a></li>
@@ -31,15 +26,17 @@
         </nav>
     </header>
 
-    <div id="content-wrapper" class="clearfix">
+    <section>
         <main>
             {{ content }}
         </main>
 
-        <aside id="sidebar">
-          <p class="repo-owner"><a href="https://github.com/nikmd23/f12-tools">F12.Tools</a> is a work in progress by <a href="https://github.com/nikmd23">nikmd23</a>.</p>
+        <aside>
+            <nav>
+                <p><a href="https://github.com/nikmd23/f12-tools">F12.Tools</a> is a work in progress by <a href="https://github.com/nikmd23">nikmd23</a>.</p>
+            </nav>
         </aside>
-    </div>
+    </section>
 
     <footer><a href="https://github.com/nikmd23/f12-tools">F12.Tools</a> is a work in progress by <a href="https://github.com/nikmd23">nikmd23</a>.</footer>
   </body>

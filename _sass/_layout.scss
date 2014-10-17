@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex: 1;
+}
+
+header {
+    padding: 0.5rem 0 0 1rem;
+}
+
+main {
+    flex: 85 0 0;
+    padding: 1rem;
+}
+
+main *:not(.comparison) {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main :target { // not really layout!
+    animation: color-change 0.25s ease-in 2 alternate;
+}
+
+aside {
+    flex: 15 0 0;
+    padding-left: 1rem;
+}
+
+aside nav {
+    position: sticky;
+    top: 1em;
+}
+
+footer {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}

@@ -1,0 +1,80 @@
+.posts {
+    list-style: none;
+}
+
+.posts > li {
+    margin-bottom: 3rem;
+}
+
+.posts > li:after {
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+.posts time {
+    border: thin solid $link-color;
+    border-radius: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $headline-font;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    overflow: hidden;
+    background: $link-color url(../images/header-bg.jpg) 0 0 repeat-x;
+    float: left;
+    margin: 0 0.75rem 0.75rem 0;
+}
+
+.posts time:before {
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    content: "";
+}
+
+.posts time > span {
+    font-size: 1.5rem;
+    line-height: 0.5;
+}
+
+.posts time[data-browser='aurora']:before, .aurora {
+    background-image: url('../images/aurora48.png');
+}
+
+.posts time[data-browser='firefox']:before, .firefox {
+    background-image: url('../images/firefox48.png');
+}
+
+.posts time[data-browser='canary']:before, .canary {
+    background-image: url('../images/canary48.png');
+}
+
+.posts time[data-browser='chrome']:before, .chrome {
+    background-image: url('../images/chrome48.png');
+}
+
+.posts time[data-browser='ie']:before, .ie {
+    background-image: url('../images/ie48.png');
+}
+
+.posts time[data-browser='dev-channel']:before, .dev-channel {
+    background-image: url('../images/dev-channel48.png');
+}
+
+.posts time[data-browser='safari']:before, .safari {
+    background-image: url('../images/safari48.png');
+}
+
+@media only screen and (max-width: 768px) {
+    .posts time {
+        float: right;
+        margin: 0 0 0.75rem 0.75rem;
+    }
+}

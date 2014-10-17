@@ -1,0 +1,23 @@
+header nav a {
+    padding: 0.3rem 0.75rem;
+    background-color: $liteblue;
+    color: $link-color;
+    border-radius: 0.4rem;    
+}
+
+header nav a:hover {
+    text-decoration: none;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav li {
+    display: inline;
+}
+
+header nav .spacer {
+    color: $white;
+    vertical-align: middle;
+}

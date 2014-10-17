@@ -1,0 +1,65 @@
+.comparison {
+    border-collapse: separate;
+    table-layout: fixed;
+}
+
+.comparison > thead th {
+    border-bottom: thin solid $darkgrey;
+    font-weight: bold;
+    background-repeat: no-repeat; // Fix Me Up on Window Shrink
+    background-position: 95% 8px;
+    text-align: left;
+    padding: 0 1rem;
+    height: 48px; // Based on size of bg images
+    vertical-align: bottom;
+}
+
+.comparison > thead th > small {
+    font-size: 0.75rem;
+    line-height: 0.75;
+    display: block;
+}
+
+.comparison > tbody th {
+    font-weight: bold;
+    text-align: right;
+    border-right: thin solid $darkgrey;
+}
+
+.comparison > tbody th > small {
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+.comparison td, .comparison th {
+    padding: 0.75rem;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.comparison td ul, .comparison td ol {
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.comparison .yes, .comparison .no, .comparison .unknown {
+    border: 0.5rem solid $white;
+}
+
+.yes {
+    background-color: $lite-green;
+    box-shadow: 0 0 0 1px $dark-green inset;
+    color: $dark-green;
+}
+
+.no {
+    background-color: $lite-red;
+    box-shadow: 0 0 0 1px $dark-red inset;
+    color: $dark-red;
+}
+
+.unknown {
+    background-color: $litegrey;
+    box-shadow: 0 0 0 1px $grey inset;
+    color: $grey;
+}
