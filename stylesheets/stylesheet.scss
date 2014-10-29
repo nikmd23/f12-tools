@@ -120,11 +120,15 @@ footer a:hover {
 
 /* SMALL */
 @media only screen and (max-width: 768px) {
-    header {
-        padding-top: 1em;
-        text-align: center;
-    }
+  header {
+    padding-top: 1em;
+    padding-left: 0;
+    text-align: center;
+  }
 
+  .logo {
+    font-size: 3rem;
+  }
 
   .post-date {
     border: thin solid #3378D3;
