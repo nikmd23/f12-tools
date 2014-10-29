@@ -43,8 +43,10 @@ main {
     -webkit-flex: 85 0 1vw; 
     -ms-flex: 85 0 1vw; 
     flex: 85 0 1vw; 
-    padding: 1rem; 
-} 
+    padding: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 
 main *:not(.comparison) {
     max-width: 50rem;
