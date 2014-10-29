@@ -91,6 +91,39 @@ h5 { font-size: 0.8rem; }
 
 h6 { font-size: 0.5rem; } 
 
+main > ol, main > ul {
+  list-style-type: none;
+  padding-left: 1.8rem !important;
+  counter-reset: li-counter;
+}
+
+main > ol > li, main > ul > li {
+  border-left: 1px solid $liteblue;
+  text-indent: -1.5rem;
+  margin-bottom: 1rem;
+  padding-left: .5rem;
+}
+
+main > ol > li:before, main > ul > li:before {
+  position: relative;
+  left: -1rem;
+  display: inline-block;
+  width: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: $headline-font;
+  color: $darkgrey;
+}
+
+main > ol > li:before {
+  content: counter(li-counter);
+  counter-increment: li-counter;
+}
+
+main > ul > li:before {
+  content: '*';
+}
+
 footer {
     background: $link-color url(../images/header-bg.jpg) 0 0 repeat-x;
     color: $white;

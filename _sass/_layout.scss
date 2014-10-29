@@ -52,8 +52,6 @@ main *:not(.comparison) {
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
 }
 
 main :target { // not really layout!
