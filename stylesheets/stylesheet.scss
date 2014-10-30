@@ -91,20 +91,20 @@ h5 { font-size: 0.8rem; }
 
 h6 { font-size: 0.5rem; } 
 
-main > ol, main > ul {
+main > ol:not(.posts), main > ul:not(.posts) {
   list-style-type: none;
   padding-left: 1.8rem !important;
   counter-reset: li-counter;
 }
 
-main > ol > li, main > ul > li {
+main > ol:not(.posts) > li, main > ul:not(.posts) > li {
   border-left: 1px solid $liteblue;
   text-indent: -1.5rem;
   margin-bottom: 1rem;
   padding-left: .5rem;
 }
 
-main > ol > li:before, main > ul > li:before {
+main > ol:not(.posts) > li:before, main > ul:not(.posts) > li:before {
   position: relative;
   left: -1rem;
   display: inline-block;
@@ -115,12 +115,12 @@ main > ol > li:before, main > ul > li:before {
   color: $darkgrey;
 }
 
-main > ol > li:before {
+main > ol:not(.posts) > li:before {
   content: counter(li-counter);
   counter-increment: li-counter;
 }
 
-main > ul > li:before {
+main > ul:not(.posts) > li:before {
   content: '*';
 }
 
