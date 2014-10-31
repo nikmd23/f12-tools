@@ -19,6 +19,8 @@
 .comparison > thead th:first-of-type {
     min-width: 8rem;
     padding: 0 0.5rem;
+    white-space:nowrap;
+    text-align: right;
 }
 
 .comparison > thead th > small {
