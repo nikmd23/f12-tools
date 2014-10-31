@@ -1,0 +1,63 @@
+.aurora-24, .canary-24, .chrome-24, .dev-channel-24, .canary-disabled-24, .aurora-disabled-24, .chrome-disabled-24, .dev-channel-disabled-24, .firefox-disabled-24, .ie-disabled-24, .safari-disabled-24, .firefox-24, .ie-24, .safari-24 {
+  display: inline-block;
+  background-image: url('/images/sprite24.png');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px
+}
+
+.aurora-24 {
+  background-position: -0px -0px;
+}
+
+.canary-24 {
+  background-position: -24px -0px;
+}
+
+.chrome-24 {
+  background-position: -0px -24px;
+}
+
+.dev-channel-24 {
+  background-position: -24px -24px;
+}
+
+.canary-disabled-24 {
+  background-position: -48px -0px;
+}
+
+.aurora-disabled-24 {
+  background-position: -48px -24px;
+}
+
+.chrome-disabled-24 {
+  background-position: -0px -48px;
+}
+
+.dev-channel-disabled-24 {
+  background-position: -24px -48px;
+}
+
+.firefox-disabled-24 {
+  background-position: -48px -48px;
+}
+
+.ie-disabled-24 {
+  background-position: -72px -0px;
+}
+
+.safari-disabled-24 {
+  background-position: -72px -24px;
+}
+
+.firefox-24 {
+  background-position: -72px -48px;
+}
+
+.ie-24 {
+  background-position: -0px -72px;
+}
+
+.safari-24 {
+  background-position: -24px -72px;
+}

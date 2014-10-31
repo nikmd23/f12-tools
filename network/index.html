@@ -9,12 +9,12 @@ title: Network
         [].forEach.call(document.querySelectorAll('.comparison input[type=checkbox]'), function(e){
             e.onchange = function(i){
                 var target = i.target,
-                    img = document.querySelector('label[for='+ target.id +'] img');
+                    lbl = document.querySelector('label[for='+ target.id +']');
                 
                 if (target.checked){
                     target.dataset.priority = ++counter;
-                    
-                    img.src = img.src.replace('disabled-','');
+
+                    lbl.className = lbl.className.replace('-disabled', '');
                     [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
                         e.classList.remove('hidden-col');
                     });
@@ -22,7 +22,7 @@ title: Network
                     enforceColumns();
                 }
                 else {
-                    img.src = img.src.replace('/images/','/images/disabled-');
+                    lbl.className = lbl.className.replace('-24', '-disabled-24');
                     [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
                         e.classList.add('hidden-col');
                     });
@@ -141,10 +141,10 @@ title: Network
     </colgroup>
     <thead>
         <th style="white-space:nowrap;">
-            <label for="chrome-checkbox"><img src="/images/chrome24.png"/></label><input id="chrome-checkbox" type="checkbox" data-priority="4" data-column-selector=".comparison tr > *:nth-child(2)" checked/>
-            <label for="firefox-checkbox"><img src="/images/firefox24.png"/></label><input id="firefox-checkbox" type="checkbox" data-priority="3" data-column-selector=".comparison tr > *:nth-child(3)" checked/>
-            <label for="ie-checkbox"><img src="/images/ie24.png"/></label><input id="ie-checkbox" type="checkbox" data-priority="2" data-column-selector=".comparison tr > *:nth-child(4)" checked/>
-            <label for="safari-checkbox"><img src="/images/safari24.png"/></label><input id="safari-checkbox" type="checkbox" data-priority="1" data-column-selector=".comparison tr > *:nth-child(5)" checked/>
+            <label for="chrome-checkbox" class="chrome-24"></label><input id="chrome-checkbox" type="checkbox" data-priority="4" data-column-selector=".comparison tr > *:nth-child(2)" checked/>
+            <label for="firefox-checkbox" class="firefox-24"></label><input id="firefox-checkbox" type="checkbox" data-priority="3" data-column-selector=".comparison tr > *:nth-child(3)" checked/>
+            <label for="ie-checkbox" class="ie-24"></label><input id="ie-checkbox" type="checkbox" data-priority="2" data-column-selector=".comparison tr > *:nth-child(4)" checked/>
+            <label for="safari-checkbox" class="safari-24"></label><input id="safari-checkbox" type="checkbox" data-priority="1" data-column-selector=".comparison tr > *:nth-child(5)" checked/>
         </th>
         <th class="chrome"><small>Google</small> Chrome</th>
         <th class="firefox"><small>Mozilla</small> FireFox</th>
