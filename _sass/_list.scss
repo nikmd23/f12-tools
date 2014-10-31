@@ -45,37 +45,37 @@
     line-height: 0.5;
 }
 
-.posts time[data-browser='aurora']:before, .aurora {
+.posts time[data-browser='aurora']:before {
     @extend .aurora-48;
     //background-image: url('../images/aurora48.png');
 }
 
-.posts time[data-browser='firefox']:before, .firefox {
+.posts time[data-browser='firefox']:before {
     @extend .firefox-48;
     //background-image: url('../images/firefox48.png');
 }
 
-.posts time[data-browser='canary']:before, .canary {
+.posts time[data-browser='canary']:before {
     @extend .canary-48;
     //background-image: url('../images/canary48.png');
 }
 
-.posts time[data-browser='chrome']:before, .chrome {
+.posts time[data-browser='chrome']:before {
     @extend .chrome-48;
     //background-image: url('../images/chrome48.png');
 }
 
-.posts time[data-browser='ie']:before, .ie {
+.posts time[data-browser='ie']:before {
     @extend .ie-48;
     //background-image: url('../images/ie48.png');
 }
 
-.posts time[data-browser='dev-channel']:before, .dev-channel {
+.posts time[data-browser='dev-channel']:before {
     @extend .dev-channel-48;
     //background-image: url('../images/dev-channel48.png');
 }
 
-.posts time[data-browser='safari']:before, .safari {
+.posts time[data-browser='safari']:before {
     @extend .safari-48;
     //background-image: url('../images/safari48.png');
 }
