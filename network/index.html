@@ -47,24 +47,16 @@ title: Network
         updateColumnCount(small, false);
         
         function updateColumnCount(mql, skipEnforceColumns) {
-            if (mql.matches) {
+            if (mql.matches)
                 columnCount = Math.max(columnCount - 1, 1);
-                console.log('DOWN');
-            }
-            else {
+            else
                 columnCount = Math.min(columnCount + 1, 4);
-                console.log('UP');
-            }
             
             if (columnCount === 4)
                 switcher.classList.add('hide-browser-switcher');
             else
                 switcher.classList.remove('hide-browser-switcher');
             
-            console.log('columnCount: ' + columnCount);
-
-            console.log('skipEnforceColumns: ' + skipEnforceColumns);
-
             if (!skipEnforceColumns)
                 enforceColumns();
         }
