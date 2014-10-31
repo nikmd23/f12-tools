@@ -29,7 +29,11 @@ title: Network
                 }
             };
         });
-        
+
+        [].forEach.call(document.querySelectorAll('.comparison label'), function(e){ // fix iOS bug: http://stackoverflow.com/questions/7358781/tapping-on-label-in-mobile-safari
+            e.onclick = function(){};
+        });
+
         var columnCount = 4,
             large = window.matchMedia("(max-width: 980px)"),
             medium = window.matchMedia("(max-width: 784px)"),
@@ -51,7 +55,7 @@ title: Network
                 columnCount = Math.max(columnCount - 1, 1);
             else
                 columnCount = Math.min(columnCount + 1, 4);
-            
+
             if (columnCount === 4)
                 switcher.classList.add('hide-browser-switcher');
             else
