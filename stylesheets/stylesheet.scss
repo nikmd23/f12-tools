@@ -23,6 +23,14 @@ $lite-red: #ffc7ce;
 @import 'list';
 @import 'comparison';
 
+// From https://fonts.googleapis.com/css?family=Architects+Daughter
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(https://fonts.gstatic.com/s/architectsdaughter/v6/RXTgOOQ9AAtaVOHxx0IUBOkI_DLF4EgbZt3mhU8gQFo.woff) format('woff');
+}
+
 html {
     font-size: 14px;
 }
