@@ -31,9 +31,9 @@ title: Network
         });
         
         var columnCount = 4,
-            large = window.matchMedia("(max-width: 70rem)"),
-            medium = window.matchMedia("(max-width: 56rem)"),
-            small = window.matchMedia("(max-width: 42rem)"),
+            large = window.matchMedia("(max-width: 980px)"),
+            medium = window.matchMedia("(max-width: 784px)"),
+            small = window.matchMedia("(max-width: 588px)"),
             counter = columnCount, // is this the right logic?
             switcher = document.querySelector('.comparison thead th:first-of-type');
         
@@ -44,21 +44,27 @@ title: Network
         updateColumnCount(medium, true);
 
         small.addListener(updateColumnCount);
-        updateColumnCount(small);
+        updateColumnCount(small, false);
         
         function updateColumnCount(mql, skipEnforceColumns) {
-            if (mql.matches)
-                columnCount = Math.max(columnCount-1, 1);
-            else
-                columnCount = Math.min(columnCount+1, 4);
+            if (mql.matches) {
+                columnCount = Math.max(columnCount - 1, 1);
+                console.log('DOWN');
+            }
+            else {
+                columnCount = Math.min(columnCount + 1, 4);
+                console.log('UP');
+            }
             
             if (columnCount === 4)
                 switcher.classList.add('hide-browser-switcher');
             else
                 switcher.classList.remove('hide-browser-switcher');
             
-            console.log(columnCount);
-            
+            console.log('columnCount: ' + columnCount);
+
+            console.log('skipEnforceColumns: ' + skipEnforceColumns);
+
             if (!skipEnforceColumns)
                 enforceColumns();
         }
