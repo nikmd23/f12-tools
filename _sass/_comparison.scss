@@ -6,12 +6,19 @@
 .comparison > thead th {
     border-bottom: thin solid $darkgrey;
     font-weight: bold;
-    background-repeat: no-repeat; // Fix Me Up on Window Shrink
+    background-repeat: no-repeat;
     background-position: 95% 8px;
     text-align: left;
     padding: 0 1rem;
     height: 48px; // Based on size of bg images
     vertical-align: bottom;
+    width: 20%;
+    min-width: 12rem;
+}
+
+.comparison > thead th:first-of-type {
+    min-width: 8rem;
+    padding: 0 0.5rem;
 }
 
 .comparison > thead th > small {
@@ -64,25 +71,15 @@
     color: $grey;
 }
 
-.comparison col {
-    min-width: 12.5em;
-    width: 20%;
-}
-
-.comparison col:first-of-type {
-    min-width: 4em;
-}
-
 .comparison input[type=checkbox] {
     display: none;
 }
 
 .comparison .hidden-col {
     display: none;
-    visibility: collapse;
 }
 
-.comparison thead th:first-of-type * {
+.comparison > thead th:first-of-type * {
     transition: opacity 0.5s ease;
 }
 

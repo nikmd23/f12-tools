@@ -31,18 +31,18 @@ title: Network
         });
         
         var columnCount = 4,
-            large = window.matchMedia("(max-width: 63em)"),
-            medium = window.matchMedia("(max-width: 50em)"),
-            small = window.matchMedia("(max-width: 33em)"),
+            large = window.matchMedia("(max-width: 70rem)"),
+            medium = window.matchMedia("(max-width: 56rem)"),
+            small = window.matchMedia("(max-width: 42rem)"),
             counter = columnCount, // is this the right logic?
             switcher = document.querySelector('.comparison thead th:first-of-type');
         
         large.addListener(updateColumnCount);
         updateColumnCount(large, true);
-        
+
         medium.addListener(updateColumnCount);
         updateColumnCount(medium, true);
-        
+
         small.addListener(updateColumnCount);
         updateColumnCount(small);
         
