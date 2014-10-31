@@ -1,3 +1,5 @@
+// minify manually at http://skalman.github.io/UglifyJS-online/
+
 window.onload = function() {
     // wire up click handlers
     [].forEach.call(document.querySelectorAll('.comparison input[type=checkbox]'), function(e){

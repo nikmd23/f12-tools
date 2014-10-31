@@ -46,31 +46,38 @@
 }
 
 .posts time[data-browser='aurora']:before, .aurora {
-    background-image: url('../images/aurora48.png');
+    @extend .aurora-48;
+    //background-image: url('../images/aurora48.png');
 }
 
 .posts time[data-browser='firefox']:before, .firefox {
-    background-image: url('../images/firefox48.png');
+    @extend .firefox-48;
+    //background-image: url('../images/firefox48.png');
 }
 
 .posts time[data-browser='canary']:before, .canary {
-    background-image: url('../images/canary48.png');
+    @extend .canary-48;
+    //background-image: url('../images/canary48.png');
 }
 
 .posts time[data-browser='chrome']:before, .chrome {
-    background-image: url('../images/chrome48.png');
+    @extend .chrome-48;
+    //background-image: url('../images/chrome48.png');
 }
 
 .posts time[data-browser='ie']:before, .ie {
-    background-image: url('../images/ie48.png');
+    @extend .ie-48;
+    //background-image: url('../images/ie48.png');
 }
 
 .posts time[data-browser='dev-channel']:before, .dev-channel {
-    background-image: url('../images/dev-channel48.png');
+    @extend .dev-channel-48;
+    //background-image: url('../images/dev-channel48.png');
 }
 
 .posts time[data-browser='safari']:before, .safari {
-    background-image: url('../images/safari48.png');
+    @extend .safari-48;
+    //background-image: url('../images/safari48.png');
 }
 
 @media only screen and (max-width: 768px) {

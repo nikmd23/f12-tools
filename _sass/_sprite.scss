@@ -1,3 +1,5 @@
+// sprites created at http://www.spritebox.net/
+
 .aurora-24, .canary-24, .chrome-24, .dev-channel-24, .canary-disabled-24, .aurora-disabled-24, .chrome-disabled-24, .dev-channel-disabled-24, .firefox-disabled-24, .ie-disabled-24, .safari-disabled-24, .firefox-24, .ie-24, .safari-24 {
   display: inline-block;
   background-image: url('/images/sprite24.png');
@@ -60,4 +62,39 @@
 
 .safari-24 {
   background-position: -24px -72px;
+}
+
+.aurora-48, .canary-48, .dev-channel-48, .chrome-48, .firefox-48, .ie-48, .safari-48 {
+  background-image: url('/images/sprite48.png');
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 48px;
+}
+
+.aurora-48 {
+  background-position: -0px -0px;
+}
+
+.canary-48 {
+  background-position: -48px -48px;
+}
+
+.dev-channel-48 {
+  background-position: -288px -288px;
+}
+
+.chrome-48 {
+  background-position: -240px -240px;
+}
+
+.firefox-48 {
+  background-position: -96px -96px;
+}
+
+.ie-48 {
+  background-position: -192px -192px;
+}
+
+.safari-48 {
+  background-position: -144px -144px;
 }
