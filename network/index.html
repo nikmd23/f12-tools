@@ -15,7 +15,7 @@ title: Network
             <label for="safari-checkbox" class="safari-24"></label><input id="safari-checkbox" type="checkbox" data-priority="1" data-column-selector=".comparison tr > *:nth-child(5)" checked/>
         </th>
         <th class="chrome-48"><small>Google</small> Chrome</th>
-        <th class="firefox-48"><small>Mozilla</small> FireFox</th>
+        <th class="firefox-48"><small>Mozilla</small> Firefox</th>
         <th class="ie-48"><small>Microsoft</small> Internet Explorer</th>
         <th class="safari-48"><small>Apple</small> Safari</th>
     </thead>
@@ -25,19 +25,20 @@ title: Network
             <td class="yes">
                 <ol>
                     <li>File Name & Path</li>
-                    <li>HTTP Method</li>
-                    <li>HTTP Status Code & Description</li>
+                    <li>Http Method</li>
+                    <li>Http Status Code & Description</li>
                     <li>Content Type</li>
                     <li>Initiator</li>
                     <li>File Size & Bytes Transfered</li>
                     <li>Download Duration & Latency</li>
                     <li>Waterfall Chart</li>
-                    <li><em>Many optional columns</em></li>
+                    <li><em>Many optional columns<sup><a href="#c1">1</a></sup></em></li>
                 </ol>
             </td>
             <td class="yes">
                 <ol>
-                    <li>HTTP Status Code</li>
+                    <li>Http Status Code</li>
+                    <li>Http Method</li>
                     <li>File Name</li>
                     <li>Domain</li>
                     <li>Content Type</li>
@@ -75,9 +76,9 @@ title: Network
         </tr>
         <tr>
             <th>Persist Log<br/><small>Persist the log across page loads.</small></th>
-            <td class="yes">Yes, via "Preserve Log" checkbox</td>
-            <td class="yes">Yes, via "Enable persistent log" checkbox in Settings</td>
-            <td class="yes">Yes, via "Clear entries on navigate" button</td>
+            <td class="yes">"Preserve Log" checkbox</td>
+            <td class="yes">"Enable persistent log" checkbox in Settings</td>
+            <td class="yes">"Clear entries on navigate" button</td>
             <td class="no"></td>
         </tr>
         <tr>
@@ -92,7 +93,7 @@ title: Network
                 <ul>
                     <li><a href="http://curl.haxx.se/">cURL</a> Command</li>
                     <li><a href="http://en.wikipedia.org/wiki/Data_URI_scheme">Data Uri</a> <small>(Images Only)</small></li>
-                </ol>
+                </ul>
             </td>
             <td class="yes">
                 <ul>
@@ -104,15 +105,31 @@ title: Network
         </tr>
         <tr>
             <th>Waterfall Chart<br/><small>What does the waterfall chart support. <code>onLoad</code>, <code>DOMContentLoaded</code>, sections of time.</small></th>
-            <td class="unknown"></td>
-            <td class="unknown">DNS Resolution:Pink, Connecting:Orange, Sending:Blue, Waiting:Blue, Receiving:Green</td>
+            <td class="yes">
+                <ol>
+                    <li>Blocking <span style="color: yellow; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Dns Resolution <span style="color: teal; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Connecting <span style="color: teal; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Sending <span style="color: purple; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Waiting <span style="color: pink; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Receiving <span style="color: red; float: right;">&FilledSmallSquare;</span></li>
+                </ol>
+            </td>
+            <td class="yes">
+                <ol>
+                    <li>Dns Resolution <span style="color: pink; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Connecting <span style="color: orange; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Sending <span style="color: blue; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Waiting <span style="color: blue; float: right;">&FilledSmallSquare;</span></li>
+                    <li>Receiving <span style="color: green; float: right;">&FilledSmallSquare;</span></li>
+                </ol>
             <td class="unknown"></td>
             <td class="unknown"></td>
         </tr>
         <tr>
             <th>Replay Request<br/><small>Reissue a request directly from the dev tools.</small></th>
-            <td class="unknown"></td>
-            <td class="unknown">Edit and resend</td>
+            <td class="no"></td>
+            <td class="yes">Full edit and resend capabilities.</td>
             <td class="unknown"></td>
             <td class="unknown"></td>
         </tr>
@@ -126,12 +143,70 @@ title: Network
             <td class="unknown"><code>DOMContentLoaded</code> and LoadEvent lines</td>
             <td class="unknown"></td>
         </tr>
+        <tr>
+            <th>Page Summary<br/><small>Summary information for a given page load.</small></th>
+            <td class="yes">
+                <ul>
+                    <li>Number of Requests</li>
+                    <li>Page Size</li>
+                    <li><code>onLoad</code> Time</li>
+                    <li><code>DomContentLoaded</code> Time</li>
+                </ul>
+            </td>
+            <td class="yes">
+                <ul>
+                    <li>Number of Requests</li>
+                    <li>Page Size</li>
+                    <li>Total Load Time</li>
+                </ul>
+            </td>
+            <td class="unknown"></td>
+            <td class="unknown"></td>
+        </tr>
+        <tr>
+            <th>Request Filtering<br/><small>How requests can be filtered.</small></th>
+            <td class="yes">
+                <ul>
+                    <li>Content Type</li>
+                    <li>Path</li>
+                    <li>Data Uri's</li>
+                </ul>
+            </td>
+            <td class="yes">
+                <ul>
+                    <li>Content Type</li>
+                </ul>
+            </td>
+            <td class="unknown"></td>
+            <td class="unknown"></td>
+        </tr>
     </tbody>
 </table>
 
 <h3>Special Features</h3>
 
 <h4>Google Chrome</h4>
+<ul>
+    <li>Support for viewing WebSocket frames when a WebSocket request has been selected.</li>
+    <li>Sort the Waterfall Chart by Start Time, Response Time, End Time Duration or Latency.</li>
+    <li>Toggle for compressed or expanded Http Request information per row.</li>
+</ul>
+
+<h4>Mozilla Firefox</h4>
+<ul>
+    <li>Content distribution chart aka "Performance Analysis".</li>
+    <li></li>
+</ul>
+
+<h3>Notable Omissions</h3>
+
+<h4>Mozilla Firefox</h4>
+<ol>
+    <li><code>OnLoad</code> & <code>DomContentReady</code> indicators.</li>
+    <li>Request initiator information.</li>
+    <li>Cookie details including: domain, path, expiration, security flags.</li>
+    <li>Web sockets support.</li>
+</ol>
 
 <ol>
     <li>What the different size's mean: https://github.com/w3c/navigation-timing/issues/3#issue-45803731</li>
