@@ -18,6 +18,12 @@ window.onload = function() {
                 enforceColumns();
             }
             else {
+                var uncheckedNum = document.querySelectorAll('.comparison input[type=checkbox]:not(:checked)').length;
+                if (uncheckedNum === 4) {
+                    target.checked = true;
+                    return false;
+                }
+
                 lbl.className = lbl.className.replace('-24', '-disabled-24');
                 [].forEach.call(document.querySelectorAll(target.dataset.columnSelector), function(e){
                     e.classList.add('hidden-col');
