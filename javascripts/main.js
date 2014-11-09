@@ -1,6 +1,24 @@
 // minify manually at http://skalman.github.io/UglifyJS-online/
 
 window.onload = function() {
+    // build toc
+    var elements = document.querySelectorAll('h3[id], th[id]'),
+        toc = document.getElementById('toc'),
+        tocHeader = document.querySelector('#toc-header');
+
+        for(var i = 0; i < elements.length; i++) {
+            var element = elements[i],
+                listItem = document.createElement('li'),
+                link = document.createElement('a');
+
+            link.text = element.dataset['toc'] || element.textContent;
+            link.href = '#' + element.id;
+
+            listItem.appendChild(link);
+
+            toc.appendChild(listItem);
+        }
+
     // wire up click handlers
     [].forEach.call(document.querySelectorAll('.comparison input[type=checkbox]'), function(e){
         e.onchange = function(i){
