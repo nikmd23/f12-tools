@@ -8,9 +8,9 @@
     border-bottom: thin solid $darkgrey;
     font-weight: bold;
     background-repeat: no-repeat;
-    background-position: 95% 8px;
-    text-align: left;
-    padding: 0 1rem;
+    text-align: right;
+    padding: 8px 0.75rem 0 0.5rem;
+    background-origin: content-box;
     height: 48px; // Based on size of bg images
     vertical-align: bottom;
     width: 20%;
@@ -88,20 +88,4 @@
 
 .comparison .hide-browser-switcher * {
     opacity: 0;
-}
-
-.comparison .firefox-48 {
-    background-image: url('../images/firefox48.png');
-}
-
-.comparison .chrome-48 {
-    background-image: url('../images/chrome48.png');
-}
-
-.comparison .ie-48 {
-    background-image: url('../images/ie48.png');
-}
-
-.comparison .safari-48 {
-    background-image: url('../images/safari48.png');
 }
