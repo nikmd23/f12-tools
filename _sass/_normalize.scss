@@ -51,33 +51,39 @@ summary {
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 
+/* Unused
 audio,
 canvas,
 progress,
 video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  display: inline-block; 
+  vertical-align: baseline;
 }
+*/
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
 
+/* Unused
 audio:not([controls]) {
   display: none;
   height: 0;
 }
+*/
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
 
+/* Unused
 [hidden],
 template {
   display: none;
 }
+*/
 
 /* Links
    ========================================================================== */
@@ -106,26 +112,32 @@ a:hover {
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 
+/* Unused
 abbr[title] {
   border-bottom: 1px dotted;
 }
+*/
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 
+/* Unused
 b,
 strong {
   font-weight: bold;
 }
+*/
 
 /**
  * Address styling not present in Safari and Chrome.
  */
 
+/* Unused
 dfn {
   font-style: italic;
 }
+*/
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
@@ -141,10 +153,12 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 
+/* Unused
 mark {
   background: #ff0;
   color: #000;
 }
+*/
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -170,9 +184,11 @@ sup {
   top: -0.5em;
 }
 
+/* Unused
 sub {
   bottom: -0.25em;
 }
+*/
 
 /* Embedded content
    ========================================================================== */
@@ -181,9 +197,11 @@ sub {
  * Remove border when inside `a` element in IE 8/9/10.
  */
 
+/* Unused
 img {
   border: 0;
 }
+*/
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
@@ -200,27 +218,33 @@ svg:not(:root) {
  * Address margin not present in IE 8/9 and Safari.
  */
 
+/* Unused
 figure {
   margin: 1em 40px;
 }
+*/
 
 /**
  * Address differences between Firefox and other browsers.
  */
 
+/* Unused
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
+*/
 
 /**
  * Contain overflow in all browsers.
  */
 
+/* Unused
 pre {
   overflow: auto;
 }
+*/
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
@@ -263,9 +287,11 @@ textarea {
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 
+/* Unused
 button {
   overflow: visible;
 }
+*/
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -274,10 +300,12 @@ button {
  * Correct `select` style inheritance in Firefox.
  */
 
+/* Unused
 button,
 select {
   text-transform: none;
 }
+*/
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -287,22 +315,26 @@ select {
  *    `input` and others.
  */
 
+/* Unused
 button,
-html input[type="button"], /* 1 */
+html input[type="button"], 
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
+  -webkit-appearance: button; 
+  cursor: pointer;
 }
+*/
 
 /**
  * Re-set default cursor for disabled elements.
  */
 
+/* Unused
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
+*/
 
 /**
  * Remove inner padding and border in Firefox 4+.
@@ -376,38 +408,46 @@ input[type="search"]::-webkit-search-decoration {
  * Define consistent border, margin, and padding.
  */
 
+/* Unused
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
+*/
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
 
+/* Unused
 legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
+  border: 0;
+  padding: 0;
 }
+*/
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 
+/* Unused
 textarea {
   overflow: auto;
 }
+*/
 
 /**
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
 
+/* Unused
 optgroup {
   font-weight: bold;
 }
+*/
 
 /* Tables
    ========================================================================== */
