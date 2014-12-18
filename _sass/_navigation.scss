@@ -9,12 +9,21 @@ header nav a:hover {
     text-decoration: none;
 }
 
+header nav a:hover svg > path {
+    fill: $link-color-hover;
+}
+
 header nav ul {
     padding: 0;
 }
 
 header nav li {
     display: inline;
+}
+
+
+header nav svg {
+    vertical-align: middle;
 }
 
 header nav .spacer {
